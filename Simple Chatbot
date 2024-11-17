@@ -1,0 +1,21 @@
+# simple_chatbot.py
+
+responses = {
+    "hi": "Hello! How can I help you?",
+    "bye": "Goodbye! Have a great day!",
+    "how are you": "I'm just a bot, but I'm doing great! How about you?"
+}
+
+def chatbot():
+    print("Chatbot is running. Type 'bye' to exit.")
+    while True:
+        user_input = input("You: ").lower()
+        if user_input in responses:
+            print("Bot:", responses[user_input])
+        else:
+            print("Bot: Sorry, I don't understand.")
+        if user_input == "bye":
+            break
+
+# Run the chatbot
+chatbot()
